@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE uiut_parse_layout(p_user_name VARCHAR2, p_json_data CLOB)
+CREATE OR REPLACE PROCEDURE uiut_parse_layout(p_user_name VARCHAR2, p_layout_id NUMBER, p_json_data CLOB)
 AS
     v_row_num NUMBER;
     v_reg_id NUMBER;
@@ -23,6 +23,7 @@ BEGIN
         ) j
         INNER JOIN uiut_regions reg
         ON j.reg_id = reg.region_id
+        WHERE reg.layout_id = p_layout_id
     ) LOOP -- TODO optimize
         INSERT INTO uiut_user_section_regions (
             user_name,

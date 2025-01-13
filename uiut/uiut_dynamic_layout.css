@@ -1,0 +1,82 @@
+.uiut-region-draggable {
+    height: 4rem;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    border: 2px dashed #828282;
+    cursor: move;
+} 
+
+.uiut-region-draggable.reg-3 {
+    width: 4rem;
+}
+
+.uiut-region-draggable.reg-6 {
+    width: 8.5rem;
+}
+
+.uiut-region-name {
+    max-width: 100%;
+    text-wrap: balance;
+    width: fit-content;
+    word-wrap: break-word;
+}
+
+.uiut-add-element {
+    flex-grow: 1;
+    height: 4rem;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    border: 2px dashed #828282;
+    color: #828282;
+}
+
+.uiut-add-element * {
+    pointer-events: none;
+}
+
+/* .miniature-icon {
+    z-index: -1;
+} */
+
+.uiut-add-element.dragged-over {
+    background-color: #D0D0D0;
+}
+
+.uiut-region-draggable.dragged-over {
+    background: linear-gradient(90deg, #D0D0D0 0%, #D0D0D0 0.3rem, #FFFFFF 1.2rem);;
+}
+
+.uiut-add-element.hidden {
+    display: none;
+}
+
+.uiut-dashboard-miniature-row {
+    width: 18rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#dashboard-miniature {
+    position: sticky;
+    top: 8.5rem;
+}
+
+#uiut-dashboard > .responsive-row > div:first-child {
+    padding-left: none;
+}
+
+#uiut-dashboard > .responsive-row > div:last-child {
+    padding-right: none;
+}
+
+.uiut-hidden-region {
+    visibility: hidden;
+}
